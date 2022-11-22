@@ -50,7 +50,7 @@ script { sh script: 'sleep 0.005', label: 'icoxs7'}
         	sh script: 'helm repo add stunner-go-frontend https://artifactory.dagility.com/artifactory/helm --username $USER --password $PASS', label: 'v8rljh'
 		}
         sh script: 'helm repo update', label: 'xkb2da'
-        sh script: 'helm upgrade stunner-go-frontend-deployment stunner-go-frontend/stunner-go-frontend-chart --install --values chart-values.yaml --namespace default --set ingress.hosts[0].host=stunner-go-frontend-default.dagility.com', label: 'j0myop'
+        sh script: 'helm upgrade stunner-go-frontend-deployment stunner-go-frontend/stunner-go-frontend-chart --install --values chart-values.yaml --namespace habitat-dagility --set ingress.hosts[0].host=stunner-go-frontend-habitat-dagility.dagility.com', label: 'j0myop'
       } //end steps
     } // end stage Deploy
   }
